@@ -10,7 +10,9 @@
     <link rel="stylesheet/less" type="text/css" href="less/styles.less">
     <link rel="stylesheet/less" type="text/css" href="less/dark.less">
     <link rel="stylesheet/less" type="text/css" href="less/light.less">
-    <script src="less/less.min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,5 +27,24 @@
     "light" or "dark", where "light" would be the default.
 -->
 <body class="light">
+    <div class="pullTopRight">
+        <a id="switch" class="waves-effect waves-light red btn-large">Switch</a><br><br><br>
+        <a onclick="switchPage('Home')" id="switchHome" class="waves-effect waves-light blue btn-large">Home</a><br>
+        <a onclick="switchPage('Features')" id="switchFeatures" class="waves-effect blue waves-light btn-large">Features</a><br>
+        <a onclick="switchPage('Gallery')" id="switchGallery" class="waves-effect blue waves-light btn-large">Gallery</a><br>
+        <a onclick="switchPage('About')" id="switchAbout" class="waves-effect waves-light blue btn-large">About</a><br>
+    </div>
+    <div id="mainContainer">
+        <div id="overlay">
+        </div>
+        <svg id="hand" xmlns="http://www.w3.org/2000/svg" viewBox="123.88235294117649 54.27450980392159 401.07843137254906 527.5490196078431" width="396.08" height="522.55">
+            <path id="handLine" d="M187.65 578.82l195.1-242.15 33.33-9.81 105.88-188.23-28.43-17.65-59.8 102.94-11.77-8.82 59.8-100.98-28.43-16.67-57.84 106.86-7.84-4.9 55.88-107.84-31.37-14.71-50.98 112.75-8.83-4.9 49.02-112.75-37.25-15.69-51.96 150.98-24.51-62.74-32.36 9.8 44.12 141.18-173.53 228.43 61.77 54.9z" />
+        </svg>
+        <iframe id="pageHome" src="html/home.html" width="800px" height="500px;"></iframe>
+        <iframe id="pageFeatures" src="html/features.html" width="800px" height="500px;"></iframe>
+        <iframe id="pageGallery" src="html/gallery.html" width="800px" height="500px;"></iframe>
+        <iframe id="pageAbout" src="html/about.html" width="800px" height="500px;"></iframe>
+    </div>
+    <script src="js/animation.js"></script>
 </body>
 </html>

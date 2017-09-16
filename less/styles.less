@@ -1,3 +1,74 @@
 // This stylesheet should not contain anything that is specific to a theme, it's purpose is to contain all the relevant style rules that are consistent across the website.
 body {
+
+	height: 100%;
+	overflow: hidden;
+
+	.pullTopRight {
+		position:absolute;
+		top:0;
+		right:0;
+		margin-right: 10px;
+	}
+
+	#mainContainer {
+		width: 1080px;
+		height: 580px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -540px;
+		margin-top: -290px;
+		overflow: hidden;
+		border: 3px solid black;
+
+		#overlay {
+			width: 1080px;
+        	height: 580px;
+        	position: absolute;
+        	background-color: #222222;
+        	opacity: 0;
+		}
+	}
+
+	#hand {
+		z-index: 10;
+		fill: #FFFFFF;
+		fill-opacity: 1;
+		stroke: #000;
+		stroke-width: 3;
+		left: -100px;
+		top: 350px;
+		position: relative;
+	}
+
+	.iframeDefault {
+		background-color: white;
+		position: relative;
+		left: 150px;
+	}
+
+	#pageHome {
+		top: -508px;
+		z-index: 2;
+		.iframeDefault;
+	}
+
+	#pageFeatures {
+		top: -1010px;
+		z-index: 0;
+		.iframeDefault;
+	}
+
+	#pageGallery {
+		top: -1518px;
+		z-index: 0;
+		.iframeDefault;
+	}
+
+	#pageAbout {
+		top: -2026px;
+		z-index: 0;
+		.iframeDefault;
+	}
 }
