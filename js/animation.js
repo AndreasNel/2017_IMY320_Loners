@@ -62,6 +62,12 @@ function switchPage(targetPage) {
 
         isAnimating = true;
 
+        $("#switch"+page).removeClass("purple");
+        $("#switch"+page).addClass("grey");
+
+        $("#switch"+targetPage).removeClass("grey");
+        $("#switch"+targetPage).addClass("purple");
+
         $("#page"+targetPage).css("z-index", "1");
         $("#hand").velocity({left: "200px", top: "50vh"}, {duration: 500});
         $("#page"+page).delay(500).velocity({left: "-150vh"}, {duration: 500, complete: function(elements) { $.each(elements, function(index, elem) {
