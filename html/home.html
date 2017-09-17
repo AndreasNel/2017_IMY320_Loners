@@ -30,12 +30,36 @@
 
 	    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 
+	    <script type="text/javascript">
+	    	function changeBannerTo(color)
+	    	{
+	    		if (color == "dark")
+	    		{
+					$("#lBanner").velocity({opacity: "0"}, {duration: 500, complete: function(elements) {
+		                $("#lBanner").removeClass("lightBanner");
+		                $("#lBanner").addClass("darkBanner");
+		            }});
+
+		            $("#lBanner").velocity({opacity: "1"}, {duration: 500});
+	    		}
+	    		else
+	    		{
+	    			$("#lBanner").velocity({opacity: "0"}, {duration: 500, complete: function(elements) {
+		                $("#lBanner").removeClass("darkBanner");
+		                $("#lBanner").addClass("lightBanner");
+		            }});
+
+		            $("#lBanner").velocity({opacity: "1"}, {duration: 500});
+	    		}
+	    	}
+	    </script>
+
 	</head>
 
 	<body>
 		
 		<img src = "../img/logo.jpg" style = "width: 100%;">
-		<div class = "darkBanner"></div>
+		<div id = "lBanner" class = "lightBanner"></div>
 
 		<div style = "background-color: #C5C1DC; display: inline-block;">
 			<h1 align = "center">Light...</h1>

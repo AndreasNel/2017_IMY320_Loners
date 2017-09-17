@@ -7,6 +7,11 @@ $( document ).ready(function() {
     $("#switch").click(function () {
         if (theme == "light") {
 
+            if (page == "Home")
+            {
+                document.getElementById('pageHome').contentWindow.changeBannerTo("dark");
+            }
+
             $("#handLine").velocity({fill: "#333333", stroke: "#FFFFFF"}, {duration: 1000});
 
             $("body").velocity({backgroundColor: "#333333"}, {duration: 1000});
@@ -22,6 +27,11 @@ $( document ).ready(function() {
             $("#switch").addClass("white");
             $("#switch").css("color", "black");
         } else {
+
+            if (page == "Home")
+            {
+                document.getElementById('pageHome').contentWindow.changeBannerTo("light");
+            }
 
             $("#handLine").velocity({fill: "#FFFFFF", stroke: "#000000"}, {duration: 1000});
             
