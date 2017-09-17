@@ -7,6 +7,11 @@ $( document ).ready(function() {
     $("#switch").click(function () {
         if (theme == "light") {
 
+            if (page == "Home")
+            {
+                document.getElementById('pageHome').contentWindow.changeBannerTo("dark");
+            }
+
             $("#handLine").velocity({fill: "#333333", stroke: "#FFFFFF"}, {duration: 1000});
 
             $("body").velocity({backgroundColor: "#333333"}, {duration: 1000});
@@ -22,6 +27,11 @@ $( document ).ready(function() {
             $("#switch").addClass("white");
             $("#switch").css("color", "black");
         } else {
+
+            if (page == "Home")
+            {
+                document.getElementById('pageHome').contentWindow.changeBannerTo("light");
+            }
 
             $("#handLine").velocity({fill: "#FFFFFF", stroke: "#000000"}, {duration: 1000});
             
@@ -51,6 +61,12 @@ function switchPage(targetPage) {
     if (page != targetPage) {
 
         isAnimating = true;
+
+        $("#switch"+page).removeClass("purple");
+        $("#switch"+page).addClass("grey");
+
+        $("#switch"+targetPage).removeClass("grey");
+        $("#switch"+targetPage).addClass("purple");
 
         $("#page"+targetPage).css("z-index", "1");
         $("#hand").velocity({left: "200px", top: "50vh"}, {duration: 500});

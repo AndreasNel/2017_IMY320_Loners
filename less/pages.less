@@ -12,10 +12,46 @@ h1 {
     min-height: 500px; 
 
     /* Create the parallax scrolling effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lolaBanner {
+    /* Set a specific height */
+    min-height: 500px; 
+
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* The image used */
+    background-image: url("../img/lola.png");
+}
+
+.darkBanner {
+    /* Set a specific height */
+    min-height: 500px; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* The image used */
+    background-image: url("../img/darkBanner.jpg");
+}
+
+.lightBanner {
+    /* Set a specific height */
+    min-height: 500px; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* The image used */
+    background-image: url("../img/lightBanner.jpg");
 }
 
 .parallaxImgOne {
@@ -162,36 +198,39 @@ h1 {
 }
 
 .fa {
-	padding: 20px;
-	font-size: 30px;
-	width: 30px;
-	text-align: center;
-	text-decoration: none;
-	margin: 5px 2px;
-	border-radius: 50%;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
 }
 
+/* Add a hover effect if you want */
 .fa:hover {
     opacity: 0.7;
 }
 
+/* Set a specific color for each brand */
+
+/* Facebook */
 .fa-facebook {
-	background: #3B5998;
-	color: white;
-  
+    background: #3B5998;
+    color: white;
 }
 
+/* Twitter */
 .fa-twitter {
-	background: #55ACEE;
-	color: white;
+    background: #55ACEE;
+    color: white;
 }
 
 .fa-google {
-	background: #dd4b39;
-	color: white;
+  background: #dd4b39;
+  color: white;
 }
 
+
 .fa-instagram {
-	background: #125688;
-	color: white;
+  background: #125688;
+  color: white;
 }
