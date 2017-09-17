@@ -1,30 +1,35 @@
 // This stylesheet should not contain anything that is specific to a theme, it's purpose is to contain all the relevant style rules that are consistent across the website.
+
 body {
 
 	height: 100%;
 	overflow: hidden;
 
 	.pullTopRight {
-		position:absolute;
-		top:0;
-		right:0;
-		margin-right: 10px;
+		position: absolute;
+		top: 10vh;
+		right: 0;
+		margin-right: 15px;
+		margin-left: 15px;
+		z-index: 100;
+	}
+
+	.btn-large {
+		margin-top: 10px;
+		display: block;
 	}
 
 	#mainContainer {
-		width: 1080px;
-		height: 580px;
+	
+		width: 100vw;
+		height: 100vh;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-left: -540px;
-		margin-top: -290px;
 		overflow: hidden;
 		border: 3px solid black;
 
 		#overlay {
-			width: 1080px;
-        	height: 580px;
+			width: 100vw;
+        	height: 100vh;
         	position: absolute;
         	background-color: #222222;
         	opacity: 0;
@@ -38,36 +43,39 @@ body {
 		stroke: #000;
 		stroke-width: 3;
 		left: -100px;
-		top: 350px;
-		position: relative;
+		top: 75vh;
+		position: absolute;
 	}
 
 	.iframeDefault {
 		background-color: white;
-		position: relative;
-		left: 150px;
+		position: absolute;
+		width: 80%;
+		height: 80%;
+		top: 10vh;
+		left: 10vw;
 	}
 
 	#pageHome {
-		top: -508px;
+		top: 10vh;
 		z-index: 2;
 		.iframeDefault;
 	}
 
 	#pageFeatures {
-		top: -1010px;
+		top: 10vh;
 		z-index: 0;
 		.iframeDefault;
 	}
 
 	#pageGallery {
-		top: -1518px;
+		top: 10vh;
 		z-index: 0;
 		.iframeDefault;
 	}
 
 	#pageAbout {
-		top: -2026px;
+		top: 10vh;
 		z-index: 0;
 		.iframeDefault;
 	}
