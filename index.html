@@ -23,14 +23,19 @@
     <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="css/lightswitch.css">
+
 </head>
 <!-- At the moment, our current idea of switching the theme of the website would
     basically just entail setting the class of the body element to 
     "light" or "dark", where "light" would be the default.
 -->
 <body class="light">
+    <div style="position: absolute; z-index: 1; height: 100px;width: 30px; margin-left: 3%;">
+        <input type="checkbox" name="switch" id="switch">
+        <label class="switch" for="switch" style="height: 100px;width: 30px;"><!--<span></span>--></label>
+    </div>
     <div class="pullTopRight">
-        <a id="switch" class="waves-effect waves-light black btn-large">Switch</a><br>
         <a onclick="switchPage('Home')" id="switchHome" class="waves-effect waves-light purple btn-large">Home</a><br>
         <a onclick="switchPage('Gallery')" id="switchGallery" class="waves-effect grey waves-light btn-large">Gallery</a><br>
         <a onclick="switchPage('Features')" id="switchFeatures" class="waves-effect grey waves-light btn-large">Features</a><br>
