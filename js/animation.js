@@ -75,6 +75,7 @@ function switchPage(targetPage) {
             $("#page"+targetPage).css("z-index", "2");
             $(elem).css("left", "10vw");
         }); }});
+        
         $("#hand").velocity({left: "-600px"}, {duration: 500});
         $("#hand").velocity({left: "-100px", top: "75vh"}, {duration: 500, complete: function(elements) { isAnimating = false; }});
 
