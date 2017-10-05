@@ -3,7 +3,9 @@ var page = "Home";
 var isAnimating = false;
 
 $( document ).ready(function() {
-
+    setTimeout(function() {
+        $('#cat').fadeOut('fast');
+    }, 5000);
     $("#switch").click(function () {
         if (theme == "light") {
 
@@ -26,8 +28,10 @@ $( document ).ready(function() {
             $("#switch").removeClass("black");
             $("#switch").addClass("white");
             $("#switch").css("color", "black");
-        } else {
+            myMove();
 
+        } else {
+            
             if (page == "Home")
             {
                 document.getElementById('pageHome').contentWindow.changeBannerTo("light");
@@ -47,6 +51,7 @@ $( document ).ready(function() {
             $("#switch").removeClass("white");
             $("#switch").addClass("black");
             $("#switch").css("color", "white");
+            
         }
     });
 
@@ -82,3 +87,23 @@ function switchPage(targetPage) {
         page = targetPage;
     }
 };
+
+function myMove() {
+    var horizontal = 1800;
+    var vertical = 960;
+    var elem = document.getElementById("character"); 
+    elem.style.left = horizontal+"px";
+    elem.style.right = vertical+"px";
+    var id = setInterval(frame, 5);
+    function frame() {
+      if (horizontal == 0) {
+          elem.style.visibility = 'hidden';
+        clearInterval(id);
+      } else {
+        horizontal--;
+        vertical = vertical - 0.5; 
+        elem.style.top = vertical + 'px'; 
+        elem.style.left = horizontal + 'px'; 
+      }
+    }
+  }
