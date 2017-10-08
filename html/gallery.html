@@ -1,111 +1,121 @@
 <html>
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	    <title>Gallery - Lona: Realm of Colors</title>
-	    <!--Import jQuery-->
-	    <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
-	    <!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
-		<!-- Latest compiled JavaScript -->
-		<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-	    <!-- LESS files and script -->
-	    <link rel="stylesheet/less" type="text/css" href="../less/styles.less">
-	    <link rel="stylesheet/less" type="text/css" href="../less/pages.less">
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
-	    <script src="../js/velocity.min.js"></script>
-	    <!--Import Google Icon Font-->
-	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	    <!--Import materialize.css-->
-	    <link type="text/css" rel="stylesheet" href="../lib/materialize/css/materialize.min.css" media="screen,projection"/>
-	    <script type="text/javascript" src="../lib/materialize/js/materialize.min.js"></script>
-	    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
-	</head>
-	<body>
-		<div class = "container-fluid">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class = "col-sm-12">
-						<div class = "example">
-							<div class = "box" data-tilt data-tilt-scale="1.1">
-								<div class = "innerImage">
-									<img src = "../img/posters/p1.jpg" style = "width: 100%;vertical-align: middle;">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class = "col-sm-12">
-						<div class = "example">
-							<div class = "box" data-tilt data-tilt-scale="1.1">
-								<div class = "innerImage">
-									<img src = "../img/posters/p2.jpg" style = "width: 100%;">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<iframe class="video col-sm-6" src="https://www.youtube.com/embed/2rqwbbK8iA8" frameborder="0" allowfullscreen></iframe>
-				<div class="col-sm-3">
-					<div class = "col-sm-12">
-						<div class = "example">
-							<div class = "box" data-tilt data-tilt-scale="1.1">
-								<div class = "innerImage">
-									<img src = "../img/posters/p3.jpg" style = "width: 100%;">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class = "col-sm-12">
-						<div class = "example">
-							<div class = "box" data-tilt data-tilt-scale="1.1">
-								<div class = "innerImage">
-									<img src = "../img/posters/p4.jpg" style = "width: 100%;">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-12">
-				<div class = "col-sm-3">
-					<div class = "example">
-						<div class = "box" data-tilt data-tilt-scale="1.1">
-							<div class = "innerImage">
-								<img src = "../img/posters/p5.jpg" style = "width: 100%;">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class = "col-sm-3">
-					<div class = "example">
-						<div class = "box" data-tilt data-tilt-scale="1.1">
-							<div class = "innerImage">
-								<img src = "../img/posters/p6.jpg" style = "width: 100%;">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class = "col-sm-3">
-					<div class = "example">
-						<div class = "box" data-tilt data-tilt-scale="1.1">
-							<div class = "innerImage">
-								<img src = "../img/posters/p7.jpg" style = "width: 100%;">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class = "col-sm-3">
-						<div class = "example">
-							<div class = "box" data-tilt data-tilt-scale="1.1">
-								<div class = "innerImage">
-									<img src = "../img/posters/p8.jpg" style = "width: 100%;">
-								</div>
-							</div>
-						</div>
-					</div>
-			</div>
-		</div>
-    	<script src="../js/vanilla-tilt.js"></script>
-	</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery - Lona: Realm of Colors</title>
+    <!--Import jQuery-->
+    <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- LESS files and script -->
+    <link rel="stylesheet/less" type="text/css" href="../less/styles.less">
+    <link rel="stylesheet/less" type="text/css" href="../less/light.less">
+    <link rel="stylesheet/less" type="text/css" href="../less/dark.less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../lib/materialize/css/materialize.min.css" media="screen,projection" />
+    <script type="text/javascript" src="../lib/materialize/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+</head>
+
+<body class="light subpage">
+    <div class="container-fluid gallery">
+        <div class="col-sm-3">
+            <div class="col-sm-12">
+                <div class="example">
+                    <div class="box" data-tilt data-tilt-scale="1.1">
+                        <div class="innerImage">
+                            <img src="../img/posters/p1.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="example">
+                    <div class="box" data-tilt data-tilt-scale="1.1">
+                        <div class="innerImage">
+                            <img src="../img/posters/p2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <iframe class="video" src="https://www.youtube.com/embed/2rqwbbK8iA8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-3">
+            <div class="col-sm-12">
+                <div class="example">
+                    <div class="box" data-tilt data-tilt-scale="1.1">
+                        <div class="innerImage">
+                            <img src="../img/posters/p3.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="example">
+                    <div class="box" data-tilt data-tilt-scale="1.1">
+                        <div class="innerImage">
+                            <img src="../img/posters/p4.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="col-sm-12">
+                <div class="example">
+                    <div class="box" data-tilt data-tilt-scale="1.1">
+                        <div class="innerImage">
+                            <img src="../img/posters/p5.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="col-sm-12">
+                <div class="example">
+                    <div class="box" data-tilt data-tilt-scale="1.1">
+                        <div class="innerImage">
+                            <img src="../img/posters/p6.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="col-sm-12">
+                <div class="example">
+                    <div class="box" data-tilt data-tilt-scale="1.1">
+                        <div class="innerImage">
+                            <img src="../img/posters/p7.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="col-sm-12">
+                <div class="example">
+                    <div class="box" data-tilt data-tilt-scale="1.1">
+                        <div class="innerImage">
+                            <img src="../img/posters/p8.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../js/vanilla-tilt.js"></script>
+</body>
+
 </html>

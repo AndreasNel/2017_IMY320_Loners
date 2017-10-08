@@ -1,14 +1,41 @@
 // All the styling relevant to the dark theme is contained within this element.
-.light {
-	#mainContainer {
+body {
+	&.light {
 		background-image: url("../img/Light_Background.jpg");
-		#cat{
-			position: relative;
-			top:-40px;
-			left:1600px;
-			height: 180px;
-			background-repeat: no-repeat;
-			background-image: url("../img/cat.gif");
+		&.subpage {
+			background-image: url('../img/crumpledPaper.jpg');
+
+			.banner {
+				background-image: url("../img/lightBanner.jpg");
+			}
+
+			.gallery {
+				.example {
+					.box {
+						background-image: -webkit-linear-gradient(315deg, #ff00ba 0%, #8A28ED 100%);
+						background-image: linear-gradient(135deg, #ff00ba 0%, #8A28ED 100%);
+					}
+				}
+			}
+		}
+
+		#mainContainer {
+			#cat{
+				position: relative;
+				top:-40px;
+				left:1600px;
+				height: 180px;
+				background-repeat: no-repeat;
+				background-image: url("../img/cat.gif");
+			}
+		}
+
+		p {
+			color: black;
+		}
+
+		h1 {
+			color: #626161
 		}
 	}
 }
