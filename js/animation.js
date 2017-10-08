@@ -4,9 +4,10 @@ var light = true;
 var dark = false;
 var active_color = "purple";
 var inactive_color = "purple lighten-3";
+var timer;
 $(document).ready(function() {
-    setTimeout(function() {
-        $('#cat').fadeOut('fast');
+    timer = setInterval(function() {
+        $('#cat').fadeToggle('fast');
     }, 5000);
     $("#switch").click(function() {
         if (light) {
@@ -126,6 +127,14 @@ function changeBannerTo(color) {
 };
 
 function changeTheme() {
+    if (timer) {
+        clearInterval(timer);
+        timer = undefined;
+    } else {
+        timer = setInterval(function() {
+            $('#cat').fadeToggle('fast');
+        }, 5000);
+    }
     var current_active = active_color;
     active_color = active_color == 'purple' ? 'teal' : 'purple';
     var current_inactive = inactive_color;
