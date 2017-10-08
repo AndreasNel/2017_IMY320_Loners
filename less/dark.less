@@ -1,14 +1,40 @@
 // All the styling relevant to the dark theme is contained within this element.
-.dark {
-	background-image: url("../img/Dark_Background.jpg");
-	#mainContainer {
-		#character{
-			position:relative;
-			top:800px;
-			left:1800px;
-			height: 180px;
-			background-repeat: no-repeat;
-			background-image: url("../img/crow.gif");
+body {
+	&.dark {
+		background-image: url("../img/Dark_Background.jpg");
+		&.subpage {
+			background-image: url('../img/dark-wrinkled-paper.jpg');
+
+			.banner {
+				background-image: url("../img/darkBanner.jpg");
+			}
+			.gallery {
+				.example {
+					.box {
+						background-image: -webkit-linear-gradient(315deg, #0FC99D 0%, #000000 100%);
+						background-image: linear-gradient(135deg, #0FC99D 0%, #000000 100%);
+					}
+				}
+			}
+		}
+
+		#mainContainer {
+			#character{
+				position:relative;
+				top:800px;
+				left:1800px;
+				height: 180px;
+				background-repeat: no-repeat;
+				background-image: url("../img/crow.gif");
+			}
+		}
+
+		p {
+			color: white;
+		}
+
+		h1 {
+			color: #81E1F1
 		}
 	}
 };
