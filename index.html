@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,43 +20,59 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection" />
     <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/lightswitch.css">
 </head>
 <!-- At the moment, our current idea of switching the theme of the website would
     basically just entail setting the class of the body element to 
     "light" or "dark", where "light" would be the default.
 -->
+
 <body class="light">
     <div style="position: absolute; z-index: 1; height: 100px;width: 30px; margin-left: 3%;">
         <input type="checkbox" name="switch" id="switch">
         <label class="switch" for="switch" style="height: 100px;width: 30px;"><!--<span></span>--></label>
     </div>
+    <div style="height:200px; float: right;">
+        <div id="cat"></div>
+    </div>
     <div class="pullTopRight">
         <a onclick="switchPage('Home')" id="switchHome" class="waves-effect waves-light purple btn-large">Home</a><br>
-        <a onclick="switchPage('Gallery')" id="switchGallery" class="waves-effect grey waves-light btn-large">Gallery</a><br>
-        <a onclick="switchPage('Features')" id="switchFeatures" class="waves-effect grey waves-light btn-large">Features</a><br>
-        <a onclick="switchPage('About')" id="switchAbout" class="waves-effect waves-light grey btn-large">About</a><br>
+        <a onclick="switchPage('Gallery')" id="switchGallery" class="waves-effect purple lighten-3 waves-light btn-large">Gallery</a><br>
+        <a onclick="switchPage('Features')" id="switchFeatures" class="waves-effect purple lighten-3 waves-light btn-large">Features</a><br>
+        <a onclick="switchPage('About')" id="switchAbout" class="waves-effect waves-light purple lighten-3 btn-large">About</a><br>
+        <a onclick="switchPage('Team')" id="switchTeam" class="waves-effect waves-light purple lighten-3 btn-large">Meet the Team</a><br>
     </div>
     <div id="mainContainer">
         <div id="overlay">
         </div>
-        <svg id="hand" xmlns="http://www.w3.org/2000/svg" viewBox="123.88235294117649 54.27450980392159 401.07843137254906 527.5490196078431" width="396.08" height="522.55">
-            <path id="handLine" d="M187.65 578.82l195.1-242.15 33.33-9.81 105.88-188.23-28.43-17.65-59.8 102.94-11.77-8.82 59.8-100.98-28.43-16.67-57.84 106.86-7.84-4.9 55.88-107.84-31.37-14.71-50.98 112.75-8.83-4.9 49.02-112.75-37.25-15.69-51.96 150.98-24.51-62.74-32.36 9.8 44.12 141.18-173.53 228.43 61.77 54.9z" />
+        <svg id="hand" xmlns="http://www.w3.org/2000/svg" viewBox="363.5 37.5 465.243 557.944" width="465.243" height="557.944">
+            <path id="handLine" d=" M 365 546.944 L 568 251.944 C 555 217.444 533 177.444 518 148.944 C 503 120.444 553 97.444 565 132.944 C 577 168.444 583 184.444 589 158.944 C 595 133.444 608 76.444 643 43.944 C 653.329 34.353 673 39.444 672 52.944 C 671 66.444 642 126.444 630 162.944 C 618 199.444 686 67.444 721 55.944 C 756 44.444 751 71.444 737 92.944 C 723 114.444 666 189.444 688 177.944 C 710 166.444 733 131.444 763 100.944 C 793 70.444 807 98.444 795 115.944 C 783 133.444 716 197.444 739 190.944 C 762 184.444 784 152.444 801 139.944 C 818 127.444 840 145.444 818 169.944 C 796 194.444 789 201.444 764 230.944 C 739 260.444 725.31 263.584 702 277.944 L 480 593.944 L 365 546.944 Z " />
         </svg>
 
         <iframe id="pageHome" src="html/home.html" frameBorder="0"></iframe>
         <iframe id="pageFeatures" src="html/features.html" frameBorder="0"></iframe>
         <iframe id="pageGallery" src="html/gallery.html" frameBorder="0"></iframe>
         <iframe id="pageAbout" src="html/about.html" frameBorder="0"></iframe>
-        
+        <iframe id="pageTeam" src="html/team.html" frameBorder="0"></iframe>
+
+        <div id="character"></div>
         <footer class="footer">
             <div class="container">
-                <p class="text-muted" align = "center">All artwork, images and videos are subject to copyright, Spacefox studio 2016</p>
+                <p align="center" style="vertical-align: middle; margin-top: 10px; ">
+                    <!-- Add font awesome icons -->
+                    <a href="https://www.facebook.com/Lonagame" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://twitter.com/LonaGame" class="fa fa-twitter" target="_blank"></a>
+                    <a href="https://www.instagram.com/lona_game/" class="fa fa-instagram" target="_blank"></a>
+                    <a href="mailto:support@lonagame.com" class="fa fa-envelope"></a>
+                </p>
+                <p class="text-muted" align="center">All artwork, images and videos are subject to copyright, Spacefox studio 2016</p>
             </div>
         </footer>
     </div>
     <script src="js/animation.js"></script>
 </body>
+
 </html>

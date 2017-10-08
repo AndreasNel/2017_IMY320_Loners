@@ -1,6 +1,41 @@
 // All the styling relevant to the dark theme is contained within this element.
-.dark {
-	#mainContainer {
+body {
+	&.dark {
 		background-image: url("../img/Dark_Background.jpg");
+		&.subpage {
+			background-image: url('../img/dark-wrinkled-paper.jpg');
+
+			.banner {
+				background-image: url("../img/dark_home.png");
+				max-width: 100%;
+				width: 100%;
+				min-height: 592px; // this is super hacky
+				max-height: 679px;
+				height: 100%;
+				
+				.swing {
+					top: 15%;
+				}
+				.bodyText {
+					background-color: #35178B;
+				}
+			}
+			.gallery {
+				.example {
+					.box {
+						background-image: -webkit-linear-gradient(315deg, #0FC99D 0%, #000000 100%);
+						background-image: linear-gradient(135deg, #0FC99D 0%, #000000 100%);
+					}
+				}
+			}
+		}
+
+		p {
+			color: white;
+		}
+
+		h1, h4 {
+			color: #81E1F1
+		}
 	}
 };
