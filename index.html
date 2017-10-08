@@ -35,11 +35,15 @@
         <input type="checkbox" name="switch" id="switch">
         <label class="switch" for="switch" style="height: 100px;width: 30px;"><!--<span></span>--></label>
     </div>
+    <div style="height:200px; float: right;">
+        <div id="cat"></div>
+    </div>
     <div class="pullTopRight">
         <a onclick="switchPage('Home')" id="switchHome" class="waves-effect waves-light purple btn-large">Home</a><br>
         <a onclick="switchPage('Gallery')" id="switchGallery" class="waves-effect purple lighten-3 waves-light btn-large">Gallery</a><br>
         <a onclick="switchPage('Features')" id="switchFeatures" class="waves-effect purple lighten-3 waves-light btn-large">Features</a><br>
         <a onclick="switchPage('About')" id="switchAbout" class="waves-effect waves-light purple lighten-3 btn-large">About</a><br>
+        <a onclick="switchPage('Team')" id="switchTeam" class="waves-effect waves-light purple lighten-3 btn-large">Meet the Team</a><br>
     </div>
     <div id="mainContainer">
         <div id="overlay">
@@ -48,18 +52,12 @@
             <path id="handLine" d=" M 365 546.944 L 568 251.944 C 555 217.444 533 177.444 518 148.944 C 503 120.444 553 97.444 565 132.944 C 577 168.444 583 184.444 589 158.944 C 595 133.444 608 76.444 643 43.944 C 653.329 34.353 673 39.444 672 52.944 C 671 66.444 642 126.444 630 162.944 C 618 199.444 686 67.444 721 55.944 C 756 44.444 751 71.444 737 92.944 C 723 114.444 666 189.444 688 177.944 C 710 166.444 733 131.444 763 100.944 C 793 70.444 807 98.444 795 115.944 C 783 133.444 716 197.444 739 190.944 C 762 184.444 784 152.444 801 139.944 C 818 127.444 840 145.444 818 169.944 C 796 194.444 789 201.444 764 230.944 C 739 260.444 725.31 263.584 702 277.944 L 480 593.944 L 365 546.944 Z " />
         </svg>
 
-        <div style="height:200px">
-            <div id="cat"></div>
-        </div>
-
         <iframe id="pageHome" src="html/home.html" frameBorder="0"></iframe>
         <iframe id="pageFeatures" src="html/features.html" frameBorder="0"></iframe>
         <iframe id="pageGallery" src="html/gallery.html" frameBorder="0"></iframe>
         <iframe id="pageAbout" src="html/about.html" frameBorder="0"></iframe>
+        <iframe id="pageTeam" src="html/team.html" frameBorder="0"></iframe>
 
-        <div id="paintbrush"></div>
-        <div id="paintbrush2"></div>
-        <div id="palette"></div>
         <div id="character"></div>
         <footer class="footer">
             <div class="container">

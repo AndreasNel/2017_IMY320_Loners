@@ -4,9 +4,10 @@ var light = true;
 var dark = false;
 var active_color = "purple";
 var inactive_color = "purple lighten-3";
+var timer;
 $(document).ready(function() {
-    setTimeout(function() {
-        $('#cat').fadeOut('fast');
+    timer = setInterval(function() {
+        $('#cat').fadeToggle('fast');
     }, 5000);
     $("#switch").click(function() {
         if (light) {
@@ -126,10 +127,18 @@ function changeBannerTo(color) {
 };
 
 function changeTheme() {
+    if (timer) {
+        clearInterval(timer);
+        timer = undefined;
+    } else {
+        timer = setInterval(function() {
+            $('#cat').fadeToggle('fast');
+        }, 5000);
+    }
     var current_active = active_color;
-    active_color = active_color == 'purple' ? 'teal' : 'purple';
+    active_color = active_color == 'purple' ? 'deep-purple' : 'purple';
     var current_inactive = inactive_color;
-    inactive_color = inactive_color == 'purple lighten-3' ? 'teal lighten-3' : 'purple lighten-3';
+    inactive_color = inactive_color == 'purple lighten-3' ? 'deep-purple lighten-3' : 'purple lighten-3';
 
     $('.' + current_active).addClass(active_color);
     $('.' + current_active).removeClass(current_active);
@@ -140,4 +149,12 @@ function changeTheme() {
     $("body").addClass(light ? 'light' : 'dark');
     $("iframe").contents().find("body").removeClass(light ? 'dark' : 'light');
     $("iframe").contents().find("body").addClass(light ? 'light' : 'dark');
+    var orig = $("iframe").contents().find(".swingimg").attr("src");
+    if (light) {
+        var newpath = orig.replace('dark', 'light');
+        $("iframe").contents().find(".swingimg").attr("src", newpath);
+    } else {
+        var newpath = orig.replace('light', 'dark');
+        $("iframe").contents().find(".swingimg").attr("src", newpath);
+    }
 };

@@ -6,7 +6,19 @@ body {
 			background-image: url('../img/dark-wrinkled-paper.jpg');
 
 			.banner {
-				background-image: url("../img/darkBanner.jpg");
+				background-image: url("../img/dark_home.png");
+				max-width: 100%;
+				width: 100%;
+				min-height: 592px; // this is super hacky
+				max-height: 679px;
+				height: 100%;
+				
+				.swing {
+					top: 15%;
+				}
+				.bodyText {
+					background-color: #35178B;
+				}
 			}
 			.gallery {
 				.example {
@@ -18,22 +30,11 @@ body {
 			}
 		}
 
-		#mainContainer {
-			#character{
-				position:relative;
-				top:800px;
-				left:1800px;
-				height: 180px;
-				background-repeat: no-repeat;
-				background-image: url("../img/crow.gif");
-			}
-		}
-
 		p {
 			color: white;
 		}
 
-		h1 {
+		h1, h4 {
 			color: #81E1F1
 		}
 	}
